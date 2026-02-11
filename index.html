@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css 
+"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Студія</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="container header-container">
+        <nav class="nav">
+          <a href="/" class="web"><span class="webt">ТОВ "ОМПК</span>"Славія""</a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link current">Головна</a>
+            </li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link">Продукція</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="info">
+          <li class="nav__item">
+            <a
+              href="mailto:ah-moloko@ukr.net"
+              class="nav__link nav__link--data"
+              ><svg class="mail__svg" width="16" height="12">
+                <use href="./images/icons.svg#mail"></use>
+              </svg>
+              ah-moloko@ukr.net</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="tel:+380961111111" class="nav__link nav__link--data"
+              ><svg class="tel__svg" width="16" height="12">
+                <use href="./images/icons.svg#tel"></use></svg
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        class="menu-container-close__btn js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="24" height="16">
+          <use href="./images/icons.svg#icon-navigation"></use>
+        </svg>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container main-container">
+          <h1 class="hero__title">"Славія" - майстерність смаку за вітчизняними традиціями"</h1>
+          <button type="button" class="hero__btn" data-modal-open>
+            Замовити послугу
+          </button>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container benefits__container">
+          <h2 class="visually-hidden">Наші переваги</h2>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <div class="benefits__block">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#antenna"></use>
+                </svg>
+              </div>
+              <h3 class="benefits__title">Увага до деталей</h3>
+              <p class="benefits__text">
+                Чистота рецептури: відсутність зайвих домішок, лише відбірне молоко.
+              </p>
+            </li>
+            <li class="benefits__item">
+              <div class="benefits__block">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#clock"></use>
+                </svg>
+              </div>
+              <h3 class="benefits__title">Пунктуальність</h3>
+              <p class="benefits__text">
+                Контроль над часом заради збереження якості.
+              </p>
+            </li>
+            <li class="benefits__item">
+              <div class="benefits__block">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#diagram"></use>
+                </svg>
+              </div>
+              <h3 class="benefits__title">Планування</h3>
+              <p class="benefits__text">
+                Здатність передбачати потреби ринку та готувати ресурси заздалегідь.
+              </p>
+            </li>
+            <li class="benefits__item">
+              <div class="benefits__block">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#astronaut"></use>
+                </svg>
+              </div>
+              <h3 class="benefits__title">Сучасні технології</h3>
+              <p class="benefits__text">
+                Іноваційний підхід до традицій: сучасні методи збереження класичного смаку.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container images__container">
+          <h2 class="images__title">Напрямки нашої роботи</h2>
+          <ul class="images__list">
+            <li class="images__text">
+              <div class="thumb-images">
+                <img
+                  src="./images/box1.jpg"
+                  alt="процес кодування"
+                  width="370"
+                  height="294"
+                />
+                <div class="images__overlay">
+                  <p class="images__text">Виробництво масла</p>
+                </div>
+              </div>
+            </li>
+            <li class="images__text">
+              <div class="thumb-images">
+                <img
+                  src="./images/box2.jpg"
+                  alt="аналітика"
+                  width="370"
+                  height="294"
+                />
+                <div class="images__overlay">
+                  <p class="images__text">Виробництво сиру</p>
+                </div>
+              </div>
+            </li>
+            <li class="images__text">
+              <div class="thumb-images">
+                <img
+                  src="./images/box3.jpg"
+                  alt="графіка"
+                  width="370"
+                  height="294"
+                />
+                <div class="images__overlay">
+                  <p class="images__text">Виробництво кисло-молочної продукції</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="clients">
+        <div class="clients__container">
+          <h2 class="clients__title">Постійні клієнти</h2>
+          <ul class="clients__list">
+            <li class="clients__item">
+              <a class="clients__link" href="">
+                <svg width="106" height="60">
+                  <use href="./images/icons.svg#logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link" href="">
+                <svg width="106" height="60">
+                  <use href="./images/icons.svg#logo-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link" href="">
+                <svg width="106" height="60">
+                  <use href="./images/icons.svg#logo-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link" href="">
+                <svg width="106" height="60">
+                  <use href="./images/icons.svg#logo-3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link" href="">
+                <svg width="106" height="60">
+                  <use href="./images/icons.svg#logo-4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a class="clients__link" href="">
+                <svg width="106" height="60">
+                  <use href="./images/icons.svg#logo-5"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__tab">
+          <address class="footer__address">
+            <a href="" class="footer__web"
+              ><span class="webt">ТОВ "ОМПК</span>"Славія""</a
+            >
+            <ul class="footer__nav">
+              <li class="footer__text">
+                <a
+                  href="https://share.google/H6IYQqHdF2aNuSLIf"
+                  target="_blank"
+                  rel="noferrer noopenner nofollow"
+                  class="footer__text"
+                  >м. Охтирка, пров. М.Хвильового, 1А</a
+                >
+              </li>
+              <li class="footer__text">
+                <a href="mailto:ah-moloko@ukr.net" class="footer__mail"
+                  >ah-moloko@ukr.net</a
+                >
+              </li>
+              <li class="footer__text">
+                <a href="tel:+380961111111" class="footer__tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+
+        </div>
+        <div class="footer__send">
+          <h3 class="footer__title-send">підпишіться на розсилку</h3>
+          <form class="footer__form">
+            <input
+              type="mail"
+              class="form__mail"
+              placeholder="E-mail"
+              name="mail"
+            />
+            <button type="submit" class="footer__btn">
+              Підписатися
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <div class="vector is-hidden" data-modal>
+      <div class="vector__container">
+        <button class="vector__btn" type="button" data-modal-close>
+          <svg class="svg__vector" width="11" height="11">
+            <use href="./images/icons.svg#vector"></use>
+          </svg>
+        </button>
+        <p class="form__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal">
+          <label class="modal__label"
+            ><span class="modal__name">Ім'я</span>
+            <span class="modal__span">
+              <input type="name" class="field" name="username" />
+              <svg class="svg__icon" width="12" height="12">
+                <use href="./images/icons.svg#vectorname"
+              </svg>
+            </span>
+          </label>
+          <label class="modal__label">
+            <span class="modal__name">Телефон</span>
+            <span class="modal__span">
+              <input type="tel" class="field" name="usertel" />
+              <svg class="svg__icon" width="12" height="12">
+                <use href="./images/icons.svg#vectortel"
+              </svg>
+            </span>
+          </label>
+          <label class="modal__label"
+            ><span class="modal__name">Пошта</span>
+            <span class="modal__span">
+              <input type="mail" class="field" name="usermail" />
+              <svg class="svg__icon" width="12" height="12">
+                <use href="./images/icons.svg#vectormail"
+              </svg>
+            </span>
+          </label>
+          <label
+            ><span class="modal__name">Коментар</span>
+            <textarea
+              name="name"
+              class="textarea__text"
+              id=""
+              placeholder="Введіть текст"
+              cols="30"
+              rows="10"
+              height="120"
+              ;
+            ></textarea>
+          </label>
+          <label class="label__check">
+            <input
+              class="check visually-hidden"
+              type="checkbox"
+              name=""
+              id=""
+              checked
+            />
+            <svg class="svg__check" width="20" height="20">
+              <use
+                class="icon-unchecked"
+                href="./images/icons.svg#icon-uncheck"
+              ></use>
+              <use
+                class="icon-checked"
+                href="./images/icons.svg#icon-check"
+              ></use>
+            </svg>
+            <span class="check__span"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="/" class="treaty__link">Умови договору</a></span
+            >
+          </label>
+          <button type="submit" class="check__btn" data-modal-open>
+            Відправити
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="19" height="19">
+          <use href="./images/icons.svg#vector"></use>
+        </svg>
+      </button>
+      <nav class="mobile__nav">
+        <ul class="mobile__list">
+          <li class="mobile__item">
+            <a href="./index.html" class="mobile__link current">Студія</a>
+          </li>
+          <li class="mobile__item">
+            <a href="./portfolio.html" class="mobile__link">Портфоліо</a>
+          </li>
+          <li class="mobile__item">
+            <a href="" class="mobile__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-content">
+        <ul class="mobile-content__list">
+          <li>
+            <a href="tel:+380961111111" class="mobile-content__link mobile__tel"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com" class="mobile-content__link">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-content__socials">
+          <li><a href="" class="mobile-content__social">Instagram</a></li>
+          <li><a href="" class="mobile-content__social">Twitter</a></li>
+          <li><a href="" class="mobile-content__social">Facebook</a></li>
+          <li><a href="" class="mobile-content__social">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
