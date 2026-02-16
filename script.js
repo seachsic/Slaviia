@@ -21,31 +21,14 @@ document.getElementById("footer-placeholder").innerHTML = `
 `;
 // Дані про продукти
 const products = {
-  milk: {
-    title: "Молоко пастеризоване",
-    description: "Натуральне коров’яче молоко, без домішок, зберігає всі корисні властивості."
-  },
-  kefir: {
-    title: "Кефір",
-    description: "Корисний кисломолочний продукт, багатий на пробіотики."
-  },
-  cottage: {
-    title: "Сир кисломолочний",
-    description: "Свіжий домашній сир з ніжною текстурою, ідеальний для сніданку."
-  },
-  hard: {
-    title: "Твердий сир",
-    description: "Витриманий сир із насиченим смаком, багатий на кальцій."
-  },
-  butter: {
-    title: "Масло вершкове",
-    description: "Високоякісне масло з вершків, має насичений смак."
-  },
-  yogurt: {
-    title: "Йогурт",
-    description: "Натуральний йогурт без добавок, корисний для травлення."
-  }
+  milk: { title: "Молоко пастеризоване", description: "Натуральне коров’яче молоко..." },
+  kefir: { title: "Кефір", description: "Корисний кисломолочний продукт..." },
+  cottage: { title: "Сир кисломолочний", description: "Свіжий домашній сир..." },
+  hard: { title: "Твердий сир", description: "Витриманий сир із насиченим смаком..." },
+  butter: { title: "Масло вершкове", description: "Високоякісне масло з вершків..." },
+  yogurt: { title: "Йогурт", description: "Натуральний йогурт без добавок..." }
 };
+
 
 
 // Модальне вікно
@@ -72,3 +55,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("productModal");
+  const titleEl = document.getElementById("productTitle");
+  const descEl = document.getElementById("productDescription");
+  const closeBtn = document.getElementById("closeProduct");
+
+  // Відкриття модального вікна
+  document.querySelectorAll("[data-modal-target]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const productKey = btn.getAttribute("data-product");
+      if (productKey && products[productKey]) {
+        titleEl.textContent = products[productKey].title;
+        descEl.textContent = products[productKey].description;
+      }
+      modal.style.display = "block";
+    });
+  });
+
+  // Закриття
+  closeBtn.onclick = () => { modal.style.display = "none"; };
+  window.onclick = (event) => { if (event.target === modal) modal.style.display = "none"; };
+});
