@@ -46,20 +46,7 @@ const products = {
     description: "Натуральний йогурт без добавок, корисний для травлення."
   }
 };
-// Модальне вікно
-const modal = document.getElementById("productModal");
-const closeBtn = document.getElementById("closeProduct");
-const title = document.getElementById("productTitle");
-const description = document.getElementById("productDescription");
 
-document.querySelectorAll(".product-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const productKey = btn.getAttribute("data-product");
-    title.textContent = products[productKey].title;
-    description.textContent = products[productKey].description;
-    modal.style.display = "block";
-  });
-});
 
 // Модальне вікно
 const modal = document.getElementById("contactModal");
