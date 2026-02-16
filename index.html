@@ -11,7 +11,7 @@
     <div class="overlay animate">
       <h1>ТОВ "ОМПК Славія"</h1>
       <p>Якість. Надійність. Партнерство.</p>
-      <button class="btn" id="contactBtn">Зв’язатися з нами</button>
+      <button class="btn" id="contactBtn" data-modal-target="productModal">Зв’язатися з нами</button>
     </div>
   </header>
 
@@ -35,10 +35,10 @@
   <div id="footer-placeholder"></div>
 
   <!-- Модальне вікно -->
-  <div id="contactModal" class="modal">
+  <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
-      <h2>Форма зворотного зв’язку</h2>
+      <h2 id="modalTitle">Форма зворотного зв’язку</h2>
       <form>
         <label for="message">Ваше повідомлення:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
@@ -46,6 +46,8 @@
       </form>
     </div>
   </div>
+
+
 
   <script src="script.js"></script>
 </body>
