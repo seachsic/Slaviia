@@ -6,6 +6,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Хедер -->
+  <header class="hero-header">
+    <div class="overlay animate">
+      <h1>ТОВ "ОМПК Славія"</h1>
+      <p>Якість. Надійність. Партнерство.</p>
+      <button class="btn" id="contactBtn">Зв’язатися з нами</button>
+    </div>
+  </header>
+
+  <!-- Навігація -->
   <nav>
     <ul>
       <li><a href="index.html">Головна</a></li>
@@ -15,35 +25,53 @@
     </ul>
   </nav>
 
-  <header class="hero-header">
-    <div class="overlay animate">
-      <h1>ТОВ "ОМПК Славія"</h1>
-      <p>Якість. Надійність. Партнерство.</p>
-      <a href="contacts.html" class="btn">Зв’язатися з нами</a>
+  <!-- Секція Контакти -->
+  <section id="contacts">
+    <h2>Контакти</h2>
+    <div class="contact-info">
+      <p><strong>Адреса:</strong> м. Охтирка, Сумська область</p>
+      <p><strong>Телефон:</strong> +380 (XX) XXX-XX-XX</p>
+      <p><strong>Email:</strong> info@slavia.com.ua</p>
     </div>
-  </header>
-
-  <section id="about">
-    <h2>Про компанію</h2>
-    <p>ТОВ «ОМПК Славія» — сучасне підприємство, що спеціалізується на виробництві та постачанні якісної продукції.</p>
-  </section>
-
-  <!-- Google Map -->
-  <section id="map">
-    <h2>Ми на карті</h2>
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.123456789!2d34.900000!3d50.300000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4123456789abcdef%3A0xabcdef123456789!2z0J7QntCeICLQodC10YDQvNCwINCc0L7QstCw0YAg0KHQvtC70YzQutCwIg!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" 
-        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
-  </section>
-
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2026 ТОВ "ОМПК Славія". Всі права захищені.</p>
-    <p>Сайт розроблено з урахуванням сучасних стандартів доступності.</p>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.123456789!2d34.900000!3d50.300000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4123456789abcdef%3A0xabcdef123456789!2z0J7QntCeICLQodC10YDQvNCwINCc0L7QstCw0YAg0KHQvtC70YzQutCwIg!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
   </div>
-</footer>
+
+  </section>
+
+  <!-- Модальне вікно -->
+  <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2 id="modalTitle">Форма зворотного зв’язку</h2>
+      <form>
+        <label for="message">Ваше повідомлення:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit" class="submit">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 ТОВ "ОМПК Славія". Всі права захищені.</p>
+      <p>Сайт розроблено з урахуванням сучасних стандартів доступності.</p>
+    </div>
+  </footer>
+
+  <!-- Скрипт для модального вікна -->
+  <script>
+    const modal = document.getElementById("contactModal");
+    const btn = document.getElementById("contactBtn");
+    const close = document.getElementById("closeModal");
+
+    btn.onclick = () => { modal.style.display = "block"; }
+    close.onclick = () => { modal.style.display = "none"; }
+    window.onclick = (event) => { if (event.target === modal) modal.style.display = "none"; }
+  </script>
 </body>
 </html>
