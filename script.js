@@ -19,7 +19,6 @@ document.getElementById("footer-placeholder").innerHTML = `
     </div>
   </footer>
 `;
-
 // Дані про продукти
 const products = {
   milk: {
@@ -47,7 +46,6 @@ const products = {
     description: "Натуральний йогурт без добавок, корисний для травлення."
   }
 };
-
 // Модальне вікно
 const modal = document.getElementById("productModal");
 const closeBtn = document.getElementById("closeProduct");
@@ -63,7 +61,13 @@ document.querySelectorAll(".product-btn").forEach(btn => {
   });
 });
 
-closeBtn.onclick = () => { modal.style.display = "none"; }
+// Модальне вікно
+const modal = document.getElementById("contactModal");
+const btn = document.getElementById("contactBtn");
+const close = document.getElementById("closeModal");
+
+btn.onclick = () => { modal.style.display = "block"; }
+close.onclick = () => { modal.style.display = "none"; }
 window.onclick = (event) => { if (event.target === modal) modal.style.display = "none"; }
 // Accordion logic
 document.addEventListener("DOMContentLoaded", () => {
