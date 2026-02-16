@@ -322,3 +322,185 @@ button.submit:hover { background: #005fa3; }
     padding: 15px;
   }
 }
+
+#about {
+  padding: 60px 20px;
+  background: #f9fafc;
+}
+#about h2 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+.about-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+.about-content ul {
+  list-style: none;
+  padding: 0;
+}
+.about-content li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.about-content li strong {
+  color: #0077cc;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  padding-left: 40px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #0077cc;
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: #0077cc;
+  border-radius: 50%;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-item .year {
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 5px;
+}
+.timeline-item h3 {
+  margin: 0;
+  color: #0077cc;
+}
+.timeline-item p {
+  margin: 5px 0 0;
+}
+
+/* Базові стилі */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafc;
+  color: #333;
+}
+
+/* Навігація */
+nav {
+  background: #003366;
+  padding: 15px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav li { margin: 0 20px; }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { color: #ffcc00; }
+
+/* Секції */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 { color: #004080; margin-bottom: 20px; }
+
+/* Картки */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Модальні вікна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; max-width: 500px;
+}
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+.close:hover { color: #000; }
+
+/* 🔹 Адаптивність */
+
+/* Планшети */
+@media (max-width: 1024px) {
+  nav ul { flex-wrap: wrap; }
+  .cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  section { padding: 40px 15px; }
+}
+
+/* Телефони */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li { margin: 10px 0; }
+  .cards { grid-template-columns: 1fr; }
+  .btn, .product-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1em;
+  }
+  .modal-content {
+    width: 95%;
+    margin: 30% auto;
+    padding: 15px;
+  }
+  footer { font-size: 0.8em; padding: 15px; }
+}
