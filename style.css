@@ -193,9 +193,14 @@ button.submit:hover { background: #005fa3; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+    opacity: 0; /* початково прихований */
+  animation: fadeBackground 2s ease forwards; /* плавне проявлення */
 }
 
-
+.contacts { 
+    opacity: 0; /* початково прихований */
+  animation: fadeBackground 2s ease forwards; /* плавне проявлення */
+}
 .card, .news-card {
   background: white;
   border-radius: 12px;
