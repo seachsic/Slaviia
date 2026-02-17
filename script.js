@@ -8,6 +8,7 @@ document.getElementById("nav-placeholder").innerHTML = `
     <li><a href="contacts.html">Контакти</a></li>
   </ul>
 </nav>
+
 `;
 
 // Футер
@@ -68,6 +69,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Закриття модальних вікон
+  document.querySelectorAll(".modal .close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      closeBtn.closest(".modal").style.display = "none";
+    });
+  });
+
+  // Закриття при кліку поза вікном
+  window.addEventListener("click", (event) => {
+    document.querySelectorAll(".modal").forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => observer.observe(item));
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Відкриття модалок
+  document.querySelectorAll("[data-modal-target]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-modal-target");
+      const modal = document.getElementById(targetId);
+      if (modal) modal.style.display = "block";
+    });
+  });
+
   // Відкриття субмодалок
   document.querySelectorAll("[data-submodal-target]").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -77,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Закриття модальних вікон
+  // Закриття модалок
   document.querySelectorAll(".modal .close").forEach(closeBtn => {
     closeBtn.addEventListener("click", () => {
       closeBtn.closest(".modal").style.display = "none";
@@ -90,18 +137,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (event.target === modal) modal.style.display = "none";
     });
   });
+});
 
-  // Анімація для timeline
-  const items = document.querySelectorAll(".timeline-item");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.2 });
-  items.forEach(item => observer.observe(item));
+document.querySelectorAll("[data-modal-target]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-modal-target");
+    const modal = document.getElementById(targetId);
+    if (modal) modal.style.display = "block";
+  });
+});
 
-  // Плавне завантаження сторінки
-  document.body.classList.add("loaded");
+document.querySelectorAll("[data-submodal-target]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-submodal-target");
+    const modal = document.getElementById(targetId);
+    if (modal) modal.style.display = "block";
+  });
 });

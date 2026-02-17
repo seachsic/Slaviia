@@ -711,3 +711,24 @@ button.submit:hover { background: #005fa3; }
 .product-btn:hover {
   background: #005fa3;
 }
+
+.modal-nws {
+  display: none; /* приховано за замовчуванням */
+  position: fixed;
+  z-index: 1000;
+  inset: 0; /* top:0; left:0; right:0; bottom:0 */
+  background-color: rgba(0,0,0,0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-nws {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
