@@ -11,9 +11,29 @@
     <div class="overlay animate">
       <h1>ТОВ "ОМПК Славія"</h1>
       <p>Якість. Надійність. Партнерство.</p>
-      <button class="btn" id="contactBtn" data-modal-target="productModal">Зв’язатися з нами</button>
+  <button class="contact-btn" data-modal-target="contactModal">Зв'язатися з нами</button>
     </div>
-  </header>
+        </header>
+        <!-- Модалка для контакту -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Зв'язатися з нами</h2>
+    <form>
+      <label for="name">Ваше ім’я:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="message">Повідомлення:</label>
+      <textarea id="message" required></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
 
   <!-- Навігація (підвантажується через JS) -->
   <div id="nav-placeholder"></div>

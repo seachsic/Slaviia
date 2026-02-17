@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Навігація -->
   <nav>
     <ul>
       <li><a href="index.html">Головна</a></li>
@@ -15,50 +16,69 @@
     </ul>
   </nav>
 
+  <!-- Секція новин -->
 <section id="news">
   <h2>Новини</h2>
   <div class="news-grid">
-    <div class="news-card" data-modal-target="newsModal1">
-      <div class="date">10.02.2026</div>
+    <!-- Новина 1 -->
+    <div class="news-card">
       <img src="./Milk-farm-63.jpg" alt="Оновлення виробництва">
       <h3>Оновлення виробництва</h3>
       <p>Модернізовано обладнання для підвищення якості продукції.</p>
+      <button class="news-btn" data-modal-target="newsModal1">Детальніше</button>
     </div>
 
-    <div class="news-card" data-modal-target="newsModal2">
-      <div class="date">05.02.2026</div>
+    <!-- Новина 2 -->
+    <div class="news-card">
       <img src="./IMG_7081.jpg" alt="Виставка">
       <h3>Участь у виставці</h3>
       <p>Презентація продукції в Києві.</p>
+      <button class="news-btn" data-modal-target="newsModal2">Детальніше</button>
     </div>
   </div>
-</section>
-
-<!-- Модальні вікна -->
-
-  <div id="newsModal1" class="modal">
-    <div class="modal-content">
-      <span class="close" >&times;</span>
+  <!-- Модалки для новини 1 -->
+<div id="newsModal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
     <h2>Оновлення виробництва</h2>
-    <p>Детальний текст новини про модернізацію обладнання...</p>
-    </div>
+    <p>Ми модернізували обладнання для підвищення якості продукції.</p>
+    <button class="news-btn" data-submodal-target="newsSubModal1">Додаткова інформація</button>
   </div>
+</div>
 
+<div id="newsSubModal1" class="modal submodal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Деталі оновлення виробництва</h3>
+    <p>Встановлено нові лінії пастеризації та пакування, що дозволяють збільшити продуктивність на 30%.</p>
+  </div>
+</div>
+
+<!-- Модалки для новини 2 -->
 <div id="newsModal2" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Участь у виставці</h2>
-    <p>Повний текст новини про презентацію продукції в Києві...</p>
+    <p>Компанія презентувала свою продукцію на виставці в Києві.</p>
+    <button class="news-btn" data-submodal-target="newsSubModal2">Додаткова інформація</button>
   </div>
 </div>
 
-  <footer>
-  <div class="footer-content">
-    <p>&copy; 2026 ТОВ "ОМПК Славія". Всі права захищені.</p>
-    <p>Сайт розроблено з урахуванням сучасних стандартів доступності.</p>
+<div id="newsSubModal2" class="modal submodal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Деталі виставки</h3>
+    <p>На виставці було представлено нові види сирів та масла, які отримали позитивні відгуки.</p>
   </div>
-</footer>
-  <script src="script.js"></script>
+</div>
+</section>
 
+
+
+  <!-- Футер -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Скрипт -->
+  <script src="script.js"></script>
 </body>
 </html>

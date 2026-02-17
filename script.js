@@ -8,7 +8,6 @@ document.getElementById("nav-placeholder").innerHTML = `
     <li><a href="contacts.html">Контакти</a></li>
   </ul>
 </nav>
-
 `;
 
 // Футер
@@ -69,104 +68,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Закриття модальних вікон
-  document.querySelectorAll(".modal .close").forEach(closeBtn => {
-    closeBtn.addEventListener("click", () => {
-      closeBtn.closest(".modal").style.display = "none";
-    });
-  });
-
-  // Закриття при кліку поза вікном
-  window.addEventListener("click", (event) => {
-    document.querySelectorAll(".modal").forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".timeline-item");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  items.forEach(item => observer.observe(item));
-});
-
-// новини //
-document.addEventListener("DOMContentLoaded", () => {
-  // Відкриття модальних вікон
-  document.querySelectorAll("[data-modal-target]").forEach(el => {
-    el.addEventListener("click", () => {
-      const targetId = el.getAttribute("data-modal-target");
-      const modal = document.getElementById(targetId);
-      if (modal) {
-        modal.style.display = "block";
-      }
-    });
-  });
-
-  // Закриття модальних вікон
-  document.querySelectorAll(".modal .close").forEach(closeBtn => {
-    closeBtn.addEventListener("click", () => {
-      closeBtn.closest(".modal").style.display = "none";
-    });
-  });
-
-  // Закриття при кліку поза модальним вікном
-  window.addEventListener("click", (event) => {
-    document.querySelectorAll(".modal").forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  });
-});
-
-// бургер меню//
-document.addEventListener("DOMContentLoaded", () => {
-  const burgerBtn = document.getElementById("burgerBtn");
-  const navLinks = document.getElementById("navLinks");
-
-  if (burgerBtn && navLinks) {
-    burgerBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  }
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("loaded");
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Відкриття модалок
-  document.querySelectorAll("[data-modal-target]").forEach(el => {
-    el.addEventListener("click", () => {
-      const targetId = el.getAttribute("data-modal-target");
-      const modal = document.getElementById(targetId);
-      if (modal) modal.style.display = "block";
-    });
-  });
-
   // Відкриття субмодалок
-  document.querySelectorAll("[data-submodal-target]").forEach(el => {
-    el.addEventListener("click", () => {
-      const targetId = el.getAttribute("data-submodal-target");
+  document.querySelectorAll("[data-submodal-target]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-submodal-target");
       const modal = document.getElementById(targetId);
       if (modal) modal.style.display = "block";
     });
   });
 
-  // Закриття модалок
+  // Закриття модальних вікон
   document.querySelectorAll(".modal .close").forEach(closeBtn => {
     closeBtn.addEventListener("click", () => {
       closeBtn.closest(".modal").style.display = "none";
@@ -179,4 +90,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (event.target === modal) modal.style.display = "none";
     });
   });
+
+  // Анімація для timeline
+  const items = document.querySelectorAll(".timeline-item");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+  items.forEach(item => observer.observe(item));
+
+  // Плавне завантаження сторінки
+  document.body.classList.add("loaded");
 });

@@ -149,14 +149,7 @@ footer .footer-content p {
   width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.6);
 }
-.modal-content {
-  background: white;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%; max-width: 500px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
+
 .close {
   color: #aaa;
   float: right;
@@ -201,6 +194,21 @@ button.submit:hover { background: #005fa3; }
     opacity: 0; /* початково прихований */
   animation: fadeBackground 2s ease forwards; /* плавне проявлення */
 }
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-btn:hover {
+  background: #005fa3;
+}
+
 .card, .news-card {
   background: white;
   border-radius: 12px;
@@ -296,20 +304,73 @@ button.submit:hover { background: #005fa3; }
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  inset: 0; /* top:0; left:0; right:0; bottom:0 */
   background-color: rgba(0,0,0,0.6);
-}
-.modal-content {
-  background: white;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%; max-width: 500px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  animation: fadeInScale 0.4s ease;
+}
+
+
+/* Заголовок */
+.modal-content h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Поля вводу */
+.modal-content label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+.modal-content textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Кнопка */
+.modal-content button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.modal-content button:hover {
+  background: #005fa3;
+}
+
+/* Кнопка закриття */
 .close {
   position: absolute;
   right: 15px;
@@ -317,6 +378,7 @@ button.submit:hover { background: #005fa3; }
   font-size: 28px;
   cursor: pointer;
 }
+
 
 .close:hover { color: #000; }
 
@@ -495,22 +557,44 @@ button.submit:hover { background: #005fa3; }
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
+
 .news-card {
-  background: white;
-  border-radius: 12px;
+  background: #fff;
+  border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+}
+
+.news-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.news-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: background 0.3s;
+}
+
+.news-btn:hover {
+  background: #005fa3;
 }
 .news-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-.news-card img { width: 100%; }
 .news-card .date {
   background: #0077cc;
   color: white;
@@ -563,31 +647,51 @@ button.submit:hover { background: #005fa3; }
 }
 .close:hover { color: #000; }
 
+/* Базовий стиль модалки */
 .modal {
-  display: none;
+  display: none; /* приховано за замовчуванням */
   position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  z-index: 1000; /* поверх контенту */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* прокрутка якщо контент великий */
+  background-color: rgba(0,0,0,0.6); /* затемнення фону */
 }
+
+/* Контент модалки */
 .modal-content {
-  background: white;
+  background: #fff;
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
-  width: 90%; max-width: 500px;
+  width: 90%;
+  max-width: 500px;
   position: relative;
+  animation: fadeInScale 0.4s ease; /* анімація відкриття */
 }
+
+/* Кнопка закриття */
 .close {
   position: absolute;
   right: 15px;
   top: 10px;
   font-size: 28px;
+  font-weight: bold;
+  color: #333;
   cursor: pointer;
 }
+
+/* Субмодалка поверх першої */
 .submodal {
-  z-index: 1100; /* поверх першої модалки */
+  z-index: 1100;
+}
+
+/* Анімація */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .product-btn {
