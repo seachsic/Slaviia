@@ -146,3 +146,37 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Відкриття модалок
+  document.querySelectorAll("[data-modal-target]").forEach(el => {
+    el.addEventListener("click", () => {
+      const targetId = el.getAttribute("data-modal-target");
+      const modal = document.getElementById(targetId);
+      if (modal) modal.style.display = "block";
+    });
+  });
+
+  // Відкриття субмодалок
+  document.querySelectorAll("[data-submodal-target]").forEach(el => {
+    el.addEventListener("click", () => {
+      const targetId = el.getAttribute("data-submodal-target");
+      const modal = document.getElementById(targetId);
+      if (modal) modal.style.display = "block";
+    });
+  });
+
+  // Закриття модалок
+  document.querySelectorAll(".modal .close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      closeBtn.closest(".modal").style.display = "none";
+    });
+  });
+
+  // Закриття при кліку поза модальним вікном
+  window.addEventListener("click", (event) => {
+    document.querySelectorAll(".modal").forEach(modal => {
+      if (event.target === modal) modal.style.display = "none";
+    });
+  });
+});

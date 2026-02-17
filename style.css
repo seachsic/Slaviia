@@ -562,3 +562,48 @@ button.submit:hover { background: #005fa3; }
   cursor: pointer;
 }
 .close:hover { color: #000; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; max-width: 500px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.submodal {
+  z-index: 1100; /* поверх першої модалки */
+}
+
+.product-btn {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 15px auto;
+  padding: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+  font-weight: bold;
+}
+.product-btn:hover {
+  background: #005fa3;
+}
