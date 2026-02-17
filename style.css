@@ -4,7 +4,15 @@ body {
   padding: 0;
   background: #f9fafc;
   color: #333;
+    opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
+body.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 h1, h2, h3 { margin: 0; }
 
 /* Хедер */

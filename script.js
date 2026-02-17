@@ -1,13 +1,14 @@
 // Навігація
 document.getElementById("nav-placeholder").innerHTML = `
-  <nav>
-    <ul>
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="products.html">Продукція</a></li>
-      <li><a href="news.html">Новини</a></li>
-      <li><a href="contacts.html">Контакти</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="products.html">Продукція</a></li>
+    <li><a href="news.html">Новини</a></li>
+    <li><a href="contacts.html">Контакти</a></li>
+  </ul>
+</nav>
+
 `;
 
 // Футер
@@ -139,4 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("show");
     });
   }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
 });
