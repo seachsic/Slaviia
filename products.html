@@ -8,38 +8,45 @@
 <body>
   <div id="nav-placeholder"></div>
 
-  <section id="products">
-    <h2>Продукція</h2>
-
-    <section class="product-category">
-      <h3>Молочні напої</h3>
-      <button class="product-btn" data-modal-target="productModal" data-product="milk">Молоко пастеризоване</button>
-      <button class="product-btn" data-modal-target="productModal" data-product="kefir">Кефір</button>
-    </section>
-
-    <section class="product-category">
-      <h3>Сири</h3>
-      <button class="product-btn" data-modal-target="productModal" data-product="cottage">Сир кисломолочний</button>
-      <button class="product-btn" data-modal-target="productModal" data-product="hard">Твердий сир</button>
-    </section>
-
-    <section class="product-category">
-      <h3>Масло та інші продукти</h3>
-      <button class="product-btn" data-modal-target="productModal" data-product="butter">Масло вершкове</button>
-      <button class="product-btn" data-modal-target="productModal" data-product="yogurt">Йогурт</button>
-    </section>
-  </section>
-
-  <!-- Модальне вікно -->
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeProduct">&times;</span>
-      <h2 id="productTitle"></h2>
-      <p id="productDescription"></p>
+<section id="products">
+  <h2>Продукція</h2>
+  <div class="product-grid">
+    <div class="product-card" data-modal-target="productModal" data-product="milk">
+      <img src="./milk.png" alt="Молоко пастеризоване">
+      <h3>Молоко пастеризоване</h3>
+      <p>Натуральне коров’яче молоко без домішок, зберігає всі корисні властивості.</p>
+      <button class="product-btn">Детальніше</button>
     </div>
-  </div>
+
+    <div class="product-card" data-modal-target="productModal" data-product="kefir">
+      <img src="./kefir.jpg" alt="Кефір">
+      <h3>Кефір</h3>
+      <p>Корисний кисломолочний продукт, багатий на пробіотики.</p>
+      <button class="product-btn">Детальніше</button>
+    </div>
+
+    <div class="product-card" data-modal-target="productModal" data-product="cottage">
+      <img src="./cheese.jpg" alt="Сир кисломолочний">
+      <h3>Сир кисломолочний</h3>
+      <p>Свіжий домашній сир з ніжною текстурою, ідеальний для сніданку.</p>
+      <button class="product-btn">Детальніше</button>
+    </div>
+</div>
 
   <div id="footer-placeholder"></div>
+
+  <!-- Модальне вікно -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="productTitle"></h2>
+    <p id="productDescription"></p>
+  </div>
+</div>
+
+
+
+
   <script src="script.js"></script>
 </body>
 </html>

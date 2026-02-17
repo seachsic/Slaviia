@@ -15,19 +15,50 @@
     </ul>
   </nav>
 
-  <section id="news">
-    <h2>Новини</h2>
-    <div class="cards">
-      <div class="card"><h3>Оновлення виробництва</h3><p>Модернізовано обладнання.</p></div>
-      <div class="card"><h3>Участь у виставці</h3><p>Презентація продукції в Києві.</p></div>
-      <div class="card"><h3>Новий партнер</h3><p>Співпраця з «ЕкоМаркет».</p></div>
+<section id="news">
+  <h2>Новини</h2>
+  <div class="news-grid">
+    <div class="news-card" data-modal-target="newsModal1">
+      <div class="date">10.02.2026</div>
+      <img src="./Milk-farm-63.jpg" alt="Оновлення виробництва">
+      <h3>Оновлення виробництва</h3>
+      <p>Модернізовано обладнання для підвищення якості продукції.</p>
     </div>
-  </section>
+
+    <div class="news-card" data-modal-target="newsModal2">
+      <div class="date">05.02.2026</div>
+      <img src="./IMG_7081.jpg" alt="Виставка">
+      <h3>Участь у виставці</h3>
+      <p>Презентація продукції в Києві.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Модальні вікна -->
+
+  <div id="newsModal1" class="modal">
+    <div class="modal-content">
+      <span class="close" >&times;</span>
+    <h2>Оновлення виробництва</h2>
+    <p>Детальний текст новини про модернізацію обладнання...</p>
+    </div>
+  </div>
+
+<div id="newsModal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Участь у виставці</h2>
+    <p>Повний текст новини про презентацію продукції в Києві...</p>
+  </div>
+</div>
+
   <footer>
   <div class="footer-content">
     <p>&copy; 2026 ТОВ "ОМПК Славія". Всі права захищені.</p>
     <p>Сайт розроблено з урахуванням сучасних стандартів доступності.</p>
   </div>
 </footer>
+  <script src="script.js"></script>
+
 </body>
 </html>

@@ -1,4 +1,10 @@
-body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f9fafc; color: #333; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafc;
+  color: #333;
+}
 h1, h2, h3 { margin: 0; }
 
 /* Хедер */
@@ -79,11 +85,17 @@ h1, h2, h3 { margin: 0; }
 /* Навігація після хедера */
 nav {
   background: #003366;
-  padding: 15px;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 999;
 }
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -169,22 +181,26 @@ button.submit:hover { background: #005fa3; }
   color: #0077cc;
   margin-bottom: 20px;
 }
-.cards {
+.cards, .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-.card {
+
+
+.card, .news-card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.card:hover {
+
+.card:hover, .news-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+
 .accordion {
   background-color: #0077cc;
   color: white;
@@ -215,18 +231,52 @@ button.submit:hover { background: #005fa3; }
   margin: 10px 0;
 }
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.product-card h3 {
+  margin: 15px;
+  color: #004080;
+}
+.product-card p {
+  margin: 0 15px 15px;
+  font-size: 0.95em;
+  color: #555;
+}
 .product-btn {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 0 auto 15px;
+  padding: 10px;
   background: #0077cc;
   color: white;
   border: none;
-  padding: 12px 20px;
   border-radius: 6px;
-  margin: 5px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 .product-btn:hover {
   background: #005fa3;
 }
+
 
 /* Модальне вікно */
 .modal {
@@ -244,15 +294,48 @@ button.submit:hover { background: #005fa3; }
   border-radius: 10px;
   width: 90%; max-width: 500px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    position: relative;
+
 }
 .close {
-  float: right;
+  position: absolute;
+  right: 15px;
+  top: 10px;
   font-size: 28px;
   cursor: pointer;
 }
+
 .close:hover { color: #000; }
 
 /* Базові стилі вже є */
+/* Планшети */
+@media (max-width: 1024px) {
+  nav ul { flex-wrap: wrap; }
+  section { padding: 40px 15px; }
+}
+
+/* Телефони */
+@media (max-width: 600px) {
+  .burger { display: block; }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  nav ul.show { display: flex; }
+  nav li { margin: 15px 0; }
+  .cards, .news-grid { grid-template-columns: 1fr; }
+  .modal-content {
+    width: 95%;
+    margin: 30% auto;
+    padding: 15px;
+  }
+}
 
 /* Для планшетів (ширина до 1024px) */
 @media (max-width: 1024px) {
@@ -397,3 +480,72 @@ button.submit:hover { background: #005fa3; }
   margin: 5px 0 0;
 }
 
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.news-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.news-card img { width: 100%; }
+.news-card .date {
+  background: #0077cc;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  position: absolute;
+  top: 10px; left: 10px;
+  border-radius: 6px;
+}
+.news-card .tag {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ffcc00;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8em;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; max-width: 500px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.close:hover { color: #000; }

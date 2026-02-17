@@ -98,3 +98,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   items.forEach(item => observer.observe(item));
 });
+
+// новини //
+document.addEventListener("DOMContentLoaded", () => {
+  // Відкриття модальних вікон
+  document.querySelectorAll("[data-modal-target]").forEach(el => {
+    el.addEventListener("click", () => {
+      const targetId = el.getAttribute("data-modal-target");
+      const modal = document.getElementById(targetId);
+      if (modal) {
+        modal.style.display = "block";
+      }
+    });
+  });
+
+  // Закриття модальних вікон
+  document.querySelectorAll(".modal .close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      closeBtn.closest(".modal").style.display = "none";
+    });
+  });
+
+  // Закриття при кліку поза модальним вікном
+  window.addEventListener("click", (event) => {
+    document.querySelectorAll(".modal").forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+});
+
+// бургер меню//
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerBtn = document.getElementById("burgerBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  if (burgerBtn && navLinks) {
+    burgerBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+});
