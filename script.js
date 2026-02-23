@@ -167,8 +167,6 @@ document.querySelectorAll("[data-submodal-target]").forEach(btn => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".testimonial-card");
-  const prevBtn = document.querySelector(".testimonial-controls .prev");
-  const nextBtn = document.querySelector(".testimonial-controls .next");
   let currentIndex = 0;
 
   function showCard(index) {
@@ -176,6 +174,13 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.toggle("active", i === index);
     });
   }
+
+  // Автоматична зміна кожні 5 секунд
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  }, 5000);
+});
 
   prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + cards.length) % cards.length;
@@ -192,4 +197,3 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex + 1) % cards.length;
     showCard(currentIndex);
   }, 5000);
-});
