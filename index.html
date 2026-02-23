@@ -110,17 +110,41 @@
       <p>"Продукція завжди свіжа та якісна. Ми співпрацюємо вже понад 5 років і дуже задоволені!"</p>
       <h4>— Ірина, Київ</h4>
     </div>
-
     <div class="testimonial-card">
       <p>"Компанія «Славія» — надійний партнер. Вони завжди виконують замовлення вчасно."</p>
       <h4>— Олександр, Харків</h4>
     </div>
-
     <div class="testimonial-card">
       <p>"Натуральні інгредієнти та сучасне виробництво — саме те, що ми шукали."</p>
       <h4>— Марія, Львів</h4>
     </div>
   </div>
+
+  <!-- Кнопка -->
+  <button id="openReviewModal" class="review-btn">Залишити відгук</button>
+</section>
+
+<!-- Модальне вікно -->
+<div id="reviewModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Залишити відгук</h3>
+    <form id="reviewForm">
+      <label for="name">Ваше ім’я:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="city">Місто:</label>
+      <input type="text" id="city" name="city">
+
+      <label for="message">Ваш відгук:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+
   <!-- Кнопки навігації -->
   <div class="testimonial-controls">
     <button class="prev">‹</button>
@@ -178,5 +202,7 @@
 
 
   <script src="script.js"></script>
+    <script src="script2.js"></script>
+
 </body>
 </html>

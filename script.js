@@ -197,3 +197,5 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex + 1) % cards.length;
     showCard(currentIndex);
   }, 5000);
+
+  
