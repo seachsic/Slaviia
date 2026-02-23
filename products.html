@@ -11,112 +11,56 @@
 <section id="products">
   <h2>Продукція</h2>
   <div class="product-grid">
-<!-- Картка продукту -->
-<div class="product-card" data-modal-target="productModalMilk">
-  <img src="./milk.png" alt="Молоко">
-  <h3>Молоко пастеризоване</h3>
-  <p>Натуральне коров’яче молоко без домішок.</p>
-  <button class="product-btn">Детальніше</button>
-</div>
+    <div class="product-card" 
+         data-title="Молоко пастеризоване" 
+         data-desc="Натуральне коров’яче молоко без домішок." 
+         data-details="Наше молоко проходить пастеризацію для збереження корисних властивостей."
+         data-img="milk.png">
+      <img src="milk.png" alt="Молоко">
+      <h3>Молоко пастеризоване</h3>
+      <p>Натуральне коров’яче молоко без домішок.</p>
+      <button class="product-btn">Детальніше</button>
+    </div>
 
-<!-- Перша модалка -->
-<div id="productModalMilk" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Молоко пастеризоване</h2>
-    <p>Наше молоко проходить пастеризацію для збереження корисних властивостей.</p>
-    <!-- Кнопка оформлена як "Детальніше" -->
-    <button class="product-btn" data-submodal-target="milkSubModal">
-      Додаткова інформація
-    </button>
+    <div class="product-card" 
+         data-title="Кефір" 
+         data-desc="Корисний кисломолочний продукт, багатий на пробіотики." 
+         data-details="Наш кефір виготовляється з натурального молока та закваски."
+         data-img="kefir.jpg">
+      <img src="kefir.jpg" alt="Кефір">
+      <h3>Кефір</h3>
+      <p>Корисний кисломолочний продукт, багатий на пробіотики.</p>
+      <button class="product-btn">Детальніше</button>
+    </div>
+
+    <div class="product-card" 
+         data-title="Сир кисломолочний" 
+         data-desc="Свіжий домашній сир з ніжною текстурою." 
+         data-details="Сир виготовляється шляхом ферментації молока з використанням заквасок."
+         data-img="cheese.jpg">
+      <img src="cheese.jpg" alt="Сир">
+      <h3>Сир кисломолочний</h3>
+      <p>Свіжий домашній сир з ніжною текстурою.</p>
+      <button class="product-btn">Детальніше</button>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Друга модалка -->
-<div id="milkSubModal" class="modal submodal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Деталі виробництва</h3>
-    <p>Молоко проходить контроль якості на кожному етапі. Сертифікати ISO та HACCP підтверджують безпеку продукції.</p>
-  </div>
-</div>
-
-<!-- Картка продукту -->
-<div class="product-card" data-modal-target="productModalKefir">
-  <img src="./kefir.jpg" alt="Кефір">
-  <h3>Кефір</h3>
-  <p>Корисний кисломолочний продукт, багатий на пробіотики.</p>
-  <button class="product-btn">Детальніше</button>
-</div>
-
-<!-- Перша модалка -->
-<div id="productModalKefir" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Кефір</h2>
-    <p>Наш кефір виготовляється з натурального молока та закваски, що забезпечує корисні властивості.</p>
-    <!-- Кнопка оформлена як "Детальніше" -->
-    <button class="product-btn" data-submodal-target="kefirSubModal">
-      Додаткова інформація
-    </button>
-  </div>
-</div>
-
-<!-- Друга модалка -->
-<div id="kefirSubModal" class="modal submodal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Деталі виробництва кефіру</h3>
-    <p>Кефір проходить ферментацію за допомогою спеціальних заквасок, що збагачують продукт пробіотиками. 
-       Він сприяє здоровій мікрофлорі та зміцнює імунітет.</p>
-  </div>
-</div>
-
-<!-- Картка продукту -->
-<div class="product-card" data-modal-target="productModalCottage">
-  <img src="./cheese.jpg" alt="Сир кисломолочний">
-  <h3>Сир кисломолочний</h3>
-  <p>Свіжий домашній сир з ніжною текстурою, ідеальний для сніданку.</p>
-  <button class="product-btn">Детальніше</button>
-</div>
-
-<!-- Перша модалка -->
-<div id="productModalCottage" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Сир кисломолочний</h2>
-    <p>Наш сир виготовляється з натурального молока, має ніжну текстуру та багатий смак.</p>
-    <!-- Кнопка оформлена як "Детальніше" -->
-    <button class="product-btn" data-submodal-target="cottageSubModal">
-      Додаткова інформація
-    </button>
-  </div>
-</div>
-
-<!-- Друга модалка -->
-<div id="cottageSubModal" class="modal submodal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Деталі виробництва сиру</h3>
-    <p>Сир виготовляється шляхом ферментації молока з використанням заквасок. 
-       Він багатий на білок, кальцій та інші корисні мікроелементи, що робить його незамінним продуктом для здорового харчування.</p>
-  </div>
-</div>
-
-
-  <!-- Модальне вікно -->
+<!-- Одна універсальна модалка -->
 <div id="productModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h2 id="productTitle"></h2>
-    <p id="productDescription"></p>
+    <img id="modalImg" src="" alt="">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDetails"></p>
   </div>
 </div>
-</div>
+
   <div id="footer-placeholder"></div>
 
 </section>
 
   <script src="script.js"></script>
+    <script src="script3.js"></script>
 </body>
 </html>

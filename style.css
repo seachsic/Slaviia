@@ -941,4 +941,64 @@ button.submit:hover { background: #005fa3; }
   cursor: pointer;
 }
 
+/* Секція продукції */
+#products {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Модалка */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Адаптація зображення в модалці */
+.modal-content img {
+  max-width: 100%;   /* картинка не ширша за модалку */
+  max-height: 60vh;  /* не вища за 60% висоти екрану */
+  height: auto;      /* пропорційне масштабування */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: contain; /* акуратне вписування */
+}
 
