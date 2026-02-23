@@ -2,7 +2,17 @@
 document.getElementById("nav-placeholder").innerHTML = `
 <nav>
   <ul>
-    <li><a href="index.html">Головна</a></li>
+    <li>
+      <a href="index.html" class="home-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Головна
+      </a>
+    </li>
     <li><a href="products.html">Продукція</a></li>
     <li><a href="news.html">Новини</a></li>
     <li><a href="contacts.html">Контакти</a></li>
@@ -153,4 +163,33 @@ document.querySelectorAll("[data-submodal-target]").forEach(btn => {
     const modal = document.getElementById(targetId);
     if (modal) modal.style.display = "block";
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".testimonial-card");
+  const prevBtn = document.querySelector(".testimonial-controls .prev");
+  const nextBtn = document.querySelector(".testimonial-controls .next");
+  let currentIndex = 0;
+
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      card.classList.toggle("active", i === index);
+    });
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showCard(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  });
+
+  // Автоматична прокрутка кожні 5 секунд
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  }, 5000);
 });

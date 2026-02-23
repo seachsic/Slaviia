@@ -732,3 +732,171 @@ button.submit:hover { background: #005fa3; }
   max-width: 600px;
   position: relative;
 }
+
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;          /* білий фон */
+  border-radius: 50%;        /* кругла кнопка */
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.home-btn svg {
+  color: #0077cc;            /* колір іконки */
+}
+
+.home-btn:hover {
+  background: #f0f0f0;       /* легке затемнення при наведенні */
+  transform: scale(1.1);     /* невелике збільшення */
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* відступ між іконкою та текстом */
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#why-us {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#why-us h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-card svg {
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#testimonials {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.testimonial-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  display: none;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+.testimonial-card.active {
+  display: block;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.testimonial-controls {
+  margin-top: 20px;
+}
+
+.testimonial-controls button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: background 0.3s;
+}
+
+.testimonial-controls button:hover {
+  background: #005fa3;
+}
+
+#partners {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#partners h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.partner-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.partner-card:hover {
+  transform: scale(1.05);
+}
+
+.partner-card img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.partner-card p {
+  font-weight: bold;
+  color: #0077cc;
+}
