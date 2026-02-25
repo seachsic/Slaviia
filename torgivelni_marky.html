@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Продукція</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+<section id="brands">
+  <h2>Наші торговельні марки</h2>
+  <div class="brands-grid">
+
+    <!-- Торгова марка -->
+    <div class="brand-card" data-modal-target="brandModalSlavia">
+      <img src="slavia-logo.png" alt="Славія">
+      <h3>Славія</h3>
+      <p>Основна торгова марка компанії, що представляє молочну продукцію найвищої якості.</p>
+      <button class="brand-btn">Детальніше</button>
+    </div>
+
+    <!-- Модалка -->
+    <div id="brandModalSlavia" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="slavia-logo.png" alt="Славія">
+        <h2>Славія</h2>
+        <p>Марка «Славія» об’єднує традиції та сучасні технології виробництва молочної продукції. 
+           Вона відома натуральністю та високими стандартами якості.</p>
+      </div>
+    </div>
+
+    <!-- Торгова марка -->
+    <div class="brand-card" data-modal-target="brandModalEco">
+      <img src="eco-logo.png" alt="EcoMilk">
+      <h3>EcoMilk</h3>
+      <p>Лінійка екологічних продуктів без ГМО та штучних домішок.</p>
+      <button class="brand-btn">Детальніше</button>
+    </div>
+
+    <!-- Модалка -->
+    <div id="brandModalEco" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="eco-logo.png" alt="EcoMilk">
+        <h2>EcoMilk</h2>
+        <p>EcoMilk — це продукція для тих, хто цінує натуральність та екологічність. 
+           Виробництво відповідає міжнародним стандартам ISO та HACCP.</p>
+      </div>
+    </div>
+
+    <!-- Торгова марка -->
+    <div class="brand-card" data-modal-target="brandModalTradition">
+      <img src="tradition-logo.png" alt="Tradition">
+      <h3>Tradition</h3>
+      <p>Продукти, створені за класичними рецептами з використанням натуральних інгредієнтів.</p>
+      <button class="brand-btn">Детальніше</button>
+    </div>
+
+    <!-- Модалка -->
+    <div id="brandModalTradition" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="tradition-logo.png" alt="Tradition">
+        <h2>Tradition</h2>
+        <p>Лінійка «Tradition» — це повернення до класичних смаків, які ми пам’ятаємо з дитинства. 
+           Вона поєднує автентичність та сучасну якість.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <script src="script-brand.js"></script>
+
+</body>
+</html>

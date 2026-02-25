@@ -13,6 +13,7 @@ document.getElementById("nav-placeholder").innerHTML = `
         Головна
       </a>
     </li>
+        <li><a href="torgivelni_marky.html">Наші торгівельні марки</a></li>
     <li><a href="products.html">Продукція</a></li>
     <li><a href="news.html">Новини</a></li>
     <li><a href="contacts.html">Контакти</a></li>

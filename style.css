@@ -1002,3 +1002,42 @@ button.submit:hover { background: #005fa3; }
   object-fit: contain; /* акуратне вписування */
 }
 
+
+.brands-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.brand-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.brand-btn {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.brand-btn:hover {
+  background: #005fa3;
+}
+
