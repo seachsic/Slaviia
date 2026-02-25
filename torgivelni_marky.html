@@ -6,14 +6,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="nav-placeholder"></div>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Новини</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Навігація -->
+  <nav>
+    <ul>
+    <li>
+      <a href="index.html" class="home-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Головна
+      </a>
+    </li>
+          <li><a href="torgivelni_marky.html">Наші торгівельні марки</a></li>
+      <li><a href="products.html">Продукція</a></li>
+      <li><a href="news.html">Новини</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
+
 <section id="brands">
   <h2>Наші торговельні марки</h2>
   <div class="brands-grid">
 
     <!-- Торгова марка -->
     <div class="brand-card" data-modal-target="brandModalSlavia">
-      <img src="slavia-logo.png" alt="Славія">
+      <img src="./slavna i ko.jpg" alt="Славія">
       <h3>Славія</h3>
       <p>Основна торгова марка компанії, що представляє молочну продукцію найвищої якості.</p>
       <button class="brand-btn">Детальніше</button>
@@ -23,17 +51,17 @@
     <div id="brandModalSlavia" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img src="slavia-logo.png" alt="Славія">
-        <h2>Славія</h2>
-        <p>Марка «Славія» об’єднує традиції та сучасні технології виробництва молочної продукції. 
+        <img src="./slavna i ko.jpg" alt="Славія">
+        <h2>Славна і Ко</h2>
+        <p>Марка "Славна і Ко" об’єднує традиції та сучасні технології виробництва молочної продукції. 
            Вона відома натуральністю та високими стандартами якості.</p>
       </div>
     </div>
 
     <!-- Торгова марка -->
     <div class="brand-card" data-modal-target="brandModalEco">
-      <img src="eco-logo.png" alt="EcoMilk">
-      <h3>EcoMilk</h3>
+      <img src="./syry burluka.png" alt="EcoMilk">
+      <h3>Сири Бурлука</h3>
       <p>Лінійка екологічних продуктів без ГМО та штучних домішок.</p>
       <button class="brand-btn">Детальніше</button>
     </div>
@@ -42,17 +70,17 @@
     <div id="brandModalEco" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img src="eco-logo.png" alt="EcoMilk">
-        <h2>EcoMilk</h2>
-        <p>EcoMilk — це продукція для тих, хто цінує натуральність та екологічність. 
+        <img src="./syry burluka.png" alt="EcoMilk">
+        <h2>Сири Бурлука</h2>
+        <p>Сири Бурлука — це продукція для тих, хто цінує натуральність та екологічність. 
            Виробництво відповідає міжнародним стандартам ISO та HACCP.</p>
       </div>
     </div>
 
     <!-- Торгова марка -->
     <div class="brand-card" data-modal-target="brandModalTradition">
-      <img src="tradition-logo.png" alt="Tradition">
-      <h3>Tradition</h3>
+      <img src="./okht.jpeg" alt="Tradition">
+      <h3>Охтирський смак</h3>
       <p>Продукти, створені за класичними рецептами з використанням натуральних інгредієнтів.</p>
       <button class="brand-btn">Детальніше</button>
     </div>
@@ -61,15 +89,18 @@
     <div id="brandModalTradition" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img src="tradition-logo.png" alt="Tradition">
-        <h2>Tradition</h2>
-        <p>Лінійка «Tradition» — це повернення до класичних смаків, які ми пам’ятаємо з дитинства. 
+        <img src="./okht.jpeg" alt="Tradition">
+        <h2>Охтирський смак</h2>
+        <p>Це повернення до класичних смаків, які ми пам’ятаємо з дитинства. 
            Вона поєднує автентичність та сучасну якість.</p>
       </div>
     </div>
 
-  </div>
+
 </section>
+
+    <div id="footer-placeholder"></div>
+
     <script src="script-brand.js"></script>
 
 </body>
