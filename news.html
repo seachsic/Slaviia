@@ -30,59 +30,81 @@
 <section id="news">
   <h2>Новини</h2>
   <div class="news-grid">
+
     <!-- Новина 1 -->
-    <div class="news-card">
-      <img src="./Milk-farm-63.jpg" alt="Оновлення виробництва">
-      <h3>Оновлення виробництва</h3>
-      <p>Модернізовано обладнання для підвищення якості продукції.</p>
-      <button class="news-btn" data-modal-target="newsModal1">Детальніше</button>
+    <div class="news-card" data-modal-target="newsModal1">
+      <img src="new-factory.jpg" alt="Нова фабрика">
+      <h3>Відкриття нової фабрики</h3>
+      <p>Компанія «Славія» відкрила сучасну виробничу лінію у Сумській області...</p>
+      <span class="date">15 лютого 2026</span>
+      <button class="news-btn">Читати більше</button>
+    </div>
+    <div id="newsModal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Відкриття нової фабрики</h2>
+        <p>Компанія «Славія» відкрила сучасну виробничу лінію у Сумській області, 
+           що дозволить збільшити обсяги виробництва, створити нові робочі місця 
+           та покращити якість продукції.</p>
+      </div>
     </div>
 
     <!-- Новина 2 -->
-    <div class="news-card">
-      <img src="./IMG_7081.jpg" alt="Виставка">
-      <h3>Участь у виставці</h3>
-      <p>Презентація продукції в Києві.</p>
-      <button class="news-btn" data-modal-target="newsModal2">Детальніше</button>
+    <div class="news-card" data-modal-target="newsModal2">
+      <img src="eco-cert.jpg" alt="Сертифікація">
+      <h3>Отримано міжнародну сертифікацію</h3>
+      <p>Продукція компанії отримала сертифікати ISO та HACCP...</p>
+      <span class="date">10 лютого 2026</span>
+      <button class="news-btn">Читати більше</button>
     </div>
-  </div>
-  <!-- Модалки для новини 1 -->
-<div id="newsModal1" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Оновлення виробництва</h2>
-    <p>Ми модернізували обладнання для підвищення якості продукції.</p>
-    <button class="news-btn" data-submodal-target="newsSubModal1">Додаткова інформація</button>
-  </div>
-</div>
+    <div id="newsModal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Отримано міжнародну сертифікацію</h2>
+        <p>Продукція компанії отримала сертифікати ISO та HACCP, 
+           що підтверджують відповідність міжнародним стандартам безпеки та якості. 
+           Це відкриває нові можливості для експорту та співпраці з міжнародними партнерами.</p>
+      </div>
+    </div>
 
-<div id="newsSubModal1" class="modal submodal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Деталі оновлення виробництва</h3>
-    <p>Встановлено нові лінії пастеризації та пакування, що дозволяють збільшити продуктивність на 30%.</p>
-  </div>
-</div>
+    <!-- Новина 3 -->
+    <div class="news-card" data-modal-target="newsModal3">
+      <img src="partnership.jpg" alt="Партнерство">
+      <h3>Нове партнерство з супермаркетами</h3>
+      <p>«Славія» розширила співпрацю з національними торговельними мережами...</p>
+      <span class="date">5 лютого 2026</span>
+      <button class="news-btn">Читати більше</button>
+    </div>
+    <div id="newsModal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Нове партнерство з супермаркетами</h2>
+        <p>«Славія» розширила співпрацю з національними торговельними мережами, 
+           щоб зробити продукцію доступною у більшості регіонів України.</p>
+      </div>
+    </div>
 
+    <!-- Новина 4 -->
+    <div class="news-card" data-modal-target="newsModal4">
+      <img src="kids-line.jpg" alt="KidsJoy">
+      <h3>Запуск дитячої лінійки KidsJoy</h3>
+      <p>Представлено нову лінійку молочних продуктів для дітей...</p>
+      <span class="date">1 лютого 2026</span>
+      <button class="news-btn">Читати більше</button>
+    </div>
+    <div id="newsModal4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Запуск дитячої лінійки KidsJoy</h2>
+        <p>Компанія представила нову лінійку молочних продуктів для дітей — 
+           йогурти та сирки з натуральними інгредієнтами.</p>
+      </div>
+    </div>
 
-<!-- Модалки для новини 2 -->
-<div id="newsModal2" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Участь у виставці</h2>
-    <p>Компанія презентувала свою продукцію на виставці в Києві.</p>
-    <button class="news-btn" data-submodal-target="newsSubModal2">Додаткова інформація</button>
+    <!-- Аналогічно додаєш модалки для інших новин -->
   </div>
-</div>
-
-<div id="newsSubModal2" class="modal submodal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Деталі виставки</h3>
-    <p>На виставці було представлено нові види сирів та масла, які отримали позитивні відгуки.</p>
-  </div>
-</div>
 </section>
+
 
 
 
